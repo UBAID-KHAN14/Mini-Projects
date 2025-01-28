@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 100vh;
+}
+
+h1{
+    font-size: 100px;
+    backdrop-filter: brightness(.5);
+    color: white;
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    font-size: 25px;
+    border: 4px solid;
+    cursor: pointer;
+    transition: 1s background-color;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    background: url("sticker-mule-osAdNaRHxzo-unsplash.jpg");
+    background-size: cover;
+    
+}
+
+.split.right{
+    position: absolute;
+    right: 0;
+    background: url("nicholas-berlette-mOaid5xqvJ0-unsplash.jpg");
+    background-size: cover;
+}
+
+.active-right .left{
+    width: 75%;
+}
+.active-right .right{
+    width: 25%;
+}
+
+.active-left .left{
+    width: 25%;
+}
+.active-left .right{
+    width: 75%;
+}
+
+.left, .right{
+    transition: width 2s ease-in-out;
+}
